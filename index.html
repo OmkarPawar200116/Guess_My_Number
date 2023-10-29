@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">
+    <style>
+        * {
+            font-family: 'Press Start 2P';  
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .whole {
+            background-color: black;
+            color: white;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        .sec-top {
+            display: flex;
+            justify-content: center;
+            font-size: 40px;
+            margin-top: 50px;
+        }
+
+        .again {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        .head-right {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .RandomNo {
+            position: absolute;
+            font-size: 55px;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            z-index: 2;
+            bottom: 58%;
+            left: 45%;
+            right: 45%;
+            margin-left: auto;
+            margin-right: auto;
+            color: black;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .hr-line {
+            margin-top: 95px;
+            height: 4px;
+            width: auto;
+            background-color: white;
+        }
+
+        .btm-sec {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 20px;
+        }
+
+        #number {
+            width: 200px;
+            height: 120px;
+            font-size: 30px;
+            padding-left: 75px;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .check {
+            font-size: 20px;
+            margin-top: 15px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .btm-right {
+            display: flex;
+            flex-direction: column;
+            margin-left: 250px;
+            margin-top: 25px;
+        }
+
+        .btm-left {
+            margin-right: 90px;
+            margin-top: 40px;
+            font-size: 30px;
+        }
+
+        .score-Guess .Hgh-score {
+            margin-top: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="whole">
+        <header class="head">
+            <div class="head-left">
+                <button class="again">Again!</button>
+            </div>
+            <p class="head-right">&lt Between 1 and 20 &gt</p>
+        </header>
+
+        <div class="sec-top">
+            <h2 class="Guess">Guess My Number!</h2>
+        </div>
+        <div class="mid-sec">
+            <hr class="hr-line">
+            <h1 class="RandomNo">?</h1>
+        </div>
+
+        <div class="btm-sec">
+            <div class="btm-right">
+                <input type="number" id="number">
+                <button class="check">Check!</button>
+            </div>
+
+            <div class="btm-left">
+                <p class="start-guess">Start Guessing...</p><br>
+                <p class="score-Guess">&#x1F4AF Score: <span class="score">20</span></p>
+                <p class="score-Achieved">&#x1F947 Highscore: <span class="Hgh-score">0</span></p>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+<script src="guessnumber.js"></script>
+
+</html>
